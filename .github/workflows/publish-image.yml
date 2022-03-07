@@ -51,7 +51,7 @@ jobs:
       - name: Start app
         run: yarn start </dev/null &>/dev/null &
       - name: Start virtual display
-        run: Xvfb :42 -nocursor && export DISPLAY=:42
+        run: Xvfb :42 -nocursor </dev/null &>/dev/null & && export DISPLAY=:42
       - name: Run end 2 end tests
         # run: xvfb-run --auto-servernum yarn test-e2e
         run: yarn test-e2e
