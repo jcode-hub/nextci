@@ -52,6 +52,11 @@ jobs:
       #   run: Xvfb :42 -nocursor </dev/null &>/dev/null &
       - name: Run end 2 end tests
         run: xvfb-run yarn test-e2e
+      - name: Save test images
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-result
+          path: tests/e2e/screenshots/tests/e2e/features/home-page.feature/linux/chromium
         # run: export DISPLAY=:42 && yarn test-e2e
   # build:
   #   runs-on: ubuntu-latest
