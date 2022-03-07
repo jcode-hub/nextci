@@ -42,10 +42,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: install display
-        run: sudo apt-get install xvfb
+      # - name: install display
+      #   run: sudo apt-get install xvfb
       - name: Install modules
         run: yarn && npx playwright install --with-deps
+      - name: Start next.js server
+        run: yarn start </dev/null &>/dev/null &
       - name: Run end 2 end tests
         run: xvfb-run --auto-servernum yarn test-e2e
   # build:
