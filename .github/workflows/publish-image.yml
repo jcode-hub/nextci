@@ -54,6 +54,7 @@ jobs:
         run: xvfb-run yarn test-e2e
       - name: Save test images
         uses: actions/upload-artifact@v3
+        if: always()
         with:
           name: test-result
           path: tests/e2e/screenshots/tests/e2e/features/home-page.feature/linux/chromium
