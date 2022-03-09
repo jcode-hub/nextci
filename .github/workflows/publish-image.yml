@@ -52,6 +52,19 @@ jobs:
       - name: Run end 2 end tests
         # run: xvfb-run yarn test-e2e
         run: yarn test-e2e
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: test-artifact
+          path: tests/e2e/screenshots/tests/e2e/features/home-page.feature/linux/chromium
+  upload-artifact:
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: test-artifact
+          path: tests/e2e/screenshots/tests/e2e/features/home-page.feature/linux/chromium
       - name: Configure AWS Credentials
         if: always()
         uses: aws-actions/configure-aws-credentials@v1
