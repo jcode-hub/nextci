@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 889000000
+              "duration": 1352000000
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 552000000
+              "duration": 220000000
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 5,
             "name": "The page is loaded",
             "match": {
-              "location": "tests/e2e/src/steps/home-page.steps.ts:17"
+              "location": "tests/e2e/src/steps/home-page.steps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 28000000
+              "duration": 24000000
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 6,
             "name": "I click on the documentation button",
             "match": {
-              "location": "tests/e2e/src/steps/home-page.steps.ts:21"
+              "location": "tests/e2e/src/steps/home-page.steps.ts:22"
             },
             "result": {
               "status": "passed",
-              "duration": 208000000
+              "duration": 134000000
             }
           },
           {
@@ -62,11 +62,11 @@
             "line": 7,
             "name": "I see the documentation page",
             "match": {
-              "location": "tests/e2e/src/steps/home-page.steps.ts:28"
+              "location": "tests/e2e/src/steps/home-page.steps.ts:29"
             },
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 2000000
             }
           },
           {
@@ -79,7 +79,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 898000000
+              "duration": 422000000
             }
           },
           {
@@ -87,11 +87,11 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 14000000
+              "duration": 13000000
             },
             "embeddings": [
               {
-                "data": "Status: PASSED. Duration:0s",
+                "data": "Status: PASSED. Duration:1s",
                 "mime_type": "text/plain"
               }
             ]
@@ -112,7 +112,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 907000000
+              "duration": 1355000000
             }
           },
           {
@@ -125,7 +125,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 521000000
+              "duration": 246000000
             }
           },
           {
@@ -134,11 +134,11 @@
             "line": 12,
             "name": "The page is loaded",
             "match": {
-              "location": "tests/e2e/src/steps/home-page.steps.ts:17"
+              "location": "tests/e2e/src/steps/home-page.steps.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 28000000
+              "duration": 25000000
             }
           },
           {
@@ -147,11 +147,11 @@
             "line": 13,
             "name": "I click on the documentation button",
             "match": {
-              "location": "tests/e2e/src/steps/home-page.steps.ts:21"
+              "location": "tests/e2e/src/steps/home-page.steps.ts:22"
             },
             "result": {
               "status": "passed",
-              "duration": 218000000
+              "duration": 147000000
             }
           },
           {
@@ -164,7 +164,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2682000000
+              "duration": 20470000000
             }
           },
           {
@@ -172,11 +172,11 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 21000000
+              "duration": 11000000
             },
             "embeddings": [
               {
-                "data": "Status: PASSED. Duration:0s",
+                "data": "Status: PASSED. Duration:1s",
                 "mime_type": "text/plain"
               }
             ]
