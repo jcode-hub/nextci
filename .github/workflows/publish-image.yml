@@ -42,23 +42,24 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn && npx playwright install --with-deps
+      - name: Build app
+        run: yarn build
+      - name: Start app
+        run: yarn start </dev/null &>/dev/null &
+      - name: Run end 2 end tests
+        run: xvfb-run yarn test-e2e
       - name: Configure AWS Credentials
+        if: always()
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-central-1
-
       - name: Copy files to the s3 website content bucket
-        run: aws --version
-      # - name: Install modules
-      #   run: yarn && npx playwright install --with-deps
-      # - name: Build app
-      #   run: yarn build
-      # - name: Start app
-      #   run: yarn start </dev/null &>/dev/null &
-      # - name: Run end 2 end tests
-      #   run: xvfb-run yarn test-e2e
+        if: always()
+        run: aws s3 sync tests s3://end2end-debug
 
   # build:
   #   runs-on: ubuntu-latest
