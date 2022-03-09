@@ -10,6 +10,7 @@ Given(
     // Write code here that turns the phrase above into concrete actions
     const page = this.page!;
     await page.goto(config.BASE_URL);
+    await page.mouse.move(0, 0);
     return true;
   }
 );
