@@ -49,7 +49,8 @@ jobs:
       - name: Start app
         run: yarn start </dev/null &>/dev/null &
       - name: Run end 2 end tests
-        run: xvfb-run yarn test-e2e
+        # run: xvfb-run yarn test-e2e
+        run: yarn test-e2e
       - name: Configure AWS Credentials
         if: always()
         uses: aws-actions/configure-aws-credentials@v1
