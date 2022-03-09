@@ -38,6 +38,7 @@ jobs:
   #       run: yarn test
   end2end-tests:
     runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright
     # needs: [lint]
     steps:
       - name: Checkout repository
