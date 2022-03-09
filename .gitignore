@@ -13,3 +13,5 @@ traces
 
 # storybook
 storybook-static
+
+ci.secrets
