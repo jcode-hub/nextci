@@ -44,7 +44,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Install modules
-        run: yarn && npx playwright install --with-deps
+        run: yarn #&& npx playwright install --with-deps
       - name: Build app
         run: yarn build
       - name: Start app
