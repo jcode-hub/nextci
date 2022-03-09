@@ -24,7 +24,7 @@ Then(
     const page = this.page!;
     await page.goto(config.BASE_URL);
     await page.mouse.move(0, 0);
-    await this.page?.waitForTimeout(timeout * 1000);
+    await this.page?.waitForTimeout(timeout * 10000);
     const screenshot = await this.page!.screenshot();
     await compareToBaseSnapshot(screenshot as Buffer, `${name}TO`, this);
   }
