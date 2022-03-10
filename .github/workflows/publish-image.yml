@@ -175,8 +175,9 @@ jobs:
           path: charts
           # submodules: true
       - name: check folder
-        run: ls -lah ${{ github.workspace }}/charts
-        # run: ls -lah charts
+        run: ls -lah ${{ github.workspace }}
+      - name: echo
+        run: echo ${{ github.workspace }}
       - name: 'Deploy'
         # uses: 'deliverybot/helm@v1'
         # uses: glopezep/helm@v1.7.1
