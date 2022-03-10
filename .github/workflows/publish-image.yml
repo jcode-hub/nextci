@@ -166,7 +166,7 @@ jobs:
 
   deploy:
     runs-on: 'ubuntu-latest'
-    container: alpine:latest
+    # container: alpine:latest
     # needs: [publish-docker-image]
     steps:
       - name: Obtain Latest Git ONLY within container for checkout
@@ -175,10 +175,10 @@ jobs:
         with:
           repository: jcode-hub/helm-chart
           ref: main
-          path: charts
+          # path: charts
           # submodules: true
-      - run: ls
-      - run: pwd
+      # - run: ls
+      # - run: pwd
       # - name: check folder
       #   run: ls -lah ${{ github.workspace }}
       # - name: echo
@@ -191,10 +191,10 @@ jobs:
           release: helm-test
           helm: helm3
           repository: 'https://jcode-hub.github.io/helm-chart'
-          repository_alias: 'mychart'
+          repository-alias: 'mychart'
           namespace: 'hello-world'
           chart: 'mychart/helm-chart-test'
           token: '${{ github.token }}'
-          value-files: '${{ github.workspace }}/charts/helm-chart-sources/helm-chart-test/values.yaml'
+          value-files: '${{ github.workspace }}/helm-chart-sources/helm-chart-test/values.yaml'
         env:
           KUBECONFIG_BASE64: '${{ secrets.KUBECONFIG }}'
