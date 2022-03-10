@@ -170,7 +170,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
         with:
-          repository: https://jcode-hub.github.io/helm-chart
+          repository: jcode-hub/helm-chart
       - name: 'Deploy'
         # uses: 'deliverybot/helm@v1'
         # uses: glopezep/helm@v1.7.1
