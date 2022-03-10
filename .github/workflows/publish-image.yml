@@ -172,6 +172,8 @@ jobs:
         with:
           repository: jcode-hub/helm-chart
           ref: main
+      - name: check folder
+        run: ls -lah
       - name: 'Deploy'
         # uses: 'deliverybot/helm@v1'
         # uses: glopezep/helm@v1.7.1
