@@ -175,7 +175,6 @@ jobs:
           ref: main
           path: charts
           # submodules: true
-      - run: git log
       - run: pwd
       - run: ls -lah
       # - name: check folder
