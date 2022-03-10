@@ -11,9 +11,7 @@ on:
       - 'main'
 
 env:
-  # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
-  # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
@@ -41,7 +39,7 @@ jobs:
         with:
           command: monitor
   sonarcloud:
-    name: SonarCloud
+    name: sonarcloud
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -181,20 +179,10 @@ jobs:
     # container: alpine:latest
     needs: [publish-docker-image]
     steps:
-      # - name: Obtain Latest Git ONLY within container for checkout
-      #   run: apk add git --update-cache
       - uses: actions/checkout@v2
         with:
           repository: jcode-hub/helm-chart
           ref: main
-          # path: charts
-          # submodules: true
-      # - run: ls
-      # - run: pwd
-      # - name: check folder
-      #   run: ls -lah ${{ github.workspace }}
-      # - name: echo
-      #   run: echo ${{ github.workspace }}
       - name: 'Deploy'
         # uses: 'deliverybot/helm@v1'
         # uses: glopezep/helm@v1.7.1
@@ -202,9 +190,10 @@ jobs:
         with:
           release: helm-test
           helm: helm3
-          repository: 'https://jcode-hub.github.io/helm-chart'
+          # repository: 'https://jcode-hub.github.io/helm-chart'
+          repository: '{{ secrets.HELM_REGISTRY }}'
           repository-alias: 'mychart'
-          namespace: 'hello-world'
+          namespace: '{{ secrets.NAMESPACE }}'
           chart: 'mychart/helm-chart-test'
           token: '${{ github.token }}'
           value-files: '${{ github.workspace }}/helm-chart-sources/helm-chart-test/values.yaml'
