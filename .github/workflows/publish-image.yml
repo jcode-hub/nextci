@@ -37,7 +37,7 @@ jobs:
   #     - name: Run unit tests
   #       run: yarn test
 
-  # e2e test linux:
+  # e2e-test-linux:
   #   runs-on: ubuntu-latest
   #   container: mcr.microsoft.com/playwright
   #   # needs: [lint]
@@ -53,7 +53,7 @@ jobs:
   #     - name: Run end 2 end tests
   #       # run: xvfb-run yarn test-e2e
   #       run: yarn test-e2e
-  e2e test mac:
+  e2e-test-mac:
     runs-on: macos-latest
     # needs: [lint]
     steps:
