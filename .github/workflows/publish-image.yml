@@ -175,7 +175,7 @@ jobs:
           path: ~/
           submodules: true
       - name: check folder
-        run: ls ~/ -lah
+        run: ls ${GITHUB_WORKSPACE}
       - name: 'Deploy'
         # uses: 'deliverybot/helm@v1'
         # uses: glopezep/helm@v1.7.1
@@ -188,6 +188,6 @@ jobs:
           namespace: 'hello-world'
           chart: 'mychart/helm-chart-test'
           token: '${{ github.token }}'
-          value-files: 'helm-chart-sources/helm-chart-test/values.yaml'
+          value-files: '${GITHUB_WORKSPACE}/helm-chart-sources/helm-chart-test/values.yaml'
         env:
           KUBECONFIG_BASE64: '${{ secrets.KUBECONFIG }}'
