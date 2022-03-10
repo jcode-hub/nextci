@@ -172,7 +172,7 @@ jobs:
         with:
           repository: jcode-hub/helm-chart
           ref: main
-          # path: ~/
+          path: ${{ github.workspace }}
           # submodules: true
       - name: check folder
         run: ls -lah ${{ github.workspace }}
