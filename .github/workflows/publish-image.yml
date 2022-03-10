@@ -172,7 +172,7 @@ jobs:
         with:
           repository: jcode-hub/helm-chart
           ref: main
-          path: ./
+          path: ~/
           submodules: true
       - name: check folder
         run: ls -lah
