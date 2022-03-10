@@ -11,7 +11,4 @@ COPY . .
 
 RUN yarn build
 
-# Run the npm run test:e2e command to host the server and run the e2e tests
-# CMD ["yarn", "start", "test-e2e"]
 CMD yarn start & yarn test-e2e
-# ENTRYPOINT [ "yarn test-e2e" ]

@@ -37,22 +37,22 @@ jobs:
   #     - name: Run unit tests
   #       run: yarn test
 
-  # e2e-test-linux:
-  #   runs-on: ubuntu-latest
-  #   container: mcr.microsoft.com/playwright
-  #   # needs: [lint]
-  #   steps:
-  #     - name: Checkout repository
-  #       uses: actions/checkout@v2
-  #     - name: Install modules
-  #       run: yarn #&& npx playwright install --with-deps
-  #     - name: Build app
-  #       run: yarn build
-  #     - name: Start app
-  #       run: yarn start </dev/null &>/dev/null &
-  #     - name: Run end 2 end tests
-  #       # run: xvfb-run yarn test-e2e
-  #       run: yarn test-e2e
+  e2e-test-linux:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright
+    # needs: [lint]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn #&& npx playwright install --with-deps
+      - name: Build app
+        run: yarn build
+      - name: Start app
+        run: yarn start </dev/null &>/dev/null &
+      - name: Run end 2 end tests
+        # run: xvfb-run yarn test-e2e
+        run: yarn test-e2e
   e2e-test-mac:
     runs-on: macos-latest
     # needs: [lint]
