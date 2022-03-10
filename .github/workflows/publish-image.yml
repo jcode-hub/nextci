@@ -175,7 +175,7 @@ jobs:
           # path: ~/
           # submodules: true
       - name: check folder
-        run: echo ${{ github.workspace }}
+        run: ls -lah ${{ github.workspace }}
       - name: 'Deploy'
         # uses: 'deliverybot/helm@v1'
         # uses: glopezep/helm@v1.7.1
