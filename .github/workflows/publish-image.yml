@@ -177,9 +177,9 @@ jobs:
           ref: main
           path: charts
           # submodules: true
-      - run: git log
+      # - run: git log
       - run: pwd
-      - run: ls -lah
+      - run: ls /home/runner/work/nextci/charts
       # - name: check folder
       #   run: ls -lah ${{ github.workspace }}
       # - name: echo
