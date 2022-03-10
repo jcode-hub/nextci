@@ -39,7 +39,7 @@ jobs:
   end2end-tests:
     # runs-on: ubuntu-latest
     runs-on: macos-latest
-    container: mcr.microsoft.com/playwright
+    # container: mcr.microsoft.com/playwright
     # needs: [lint]
     steps:
       - name: Checkout repository
