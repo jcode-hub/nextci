@@ -172,10 +172,10 @@ jobs:
         with:
           repository: jcode-hub/helm-chart
           ref: main
-          path: ~/
-          submodules: true
+          # path: ~/
+          # submodules: true
       - name: check folder
-        run: ls ${GITHUB_WORKSPACE}
+        run: echo ${GITHUB_WORKSPACE}
       - name: 'Deploy'
         # uses: 'deliverybot/helm@v1'
         # uses: glopezep/helm@v1.7.1
