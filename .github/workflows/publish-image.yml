@@ -179,7 +179,6 @@ jobs:
           # submodules: true
       - run: ls
       - run: pwd
-      - run: ls /home/runner/work/nextci/charts
       # - name: check folder
       #   run: ls -lah ${{ github.workspace }}
       # - name: echo
@@ -196,7 +195,6 @@ jobs:
           namespace: 'hello-world'
           chart: 'mychart/helm-chart-test'
           token: '${{ github.token }}'
-          # value-files: '${{ github.workspace }}/nextci/helm-chart-sources/helm-chart-test/values.yaml'
-          value-files: '/home/runner/work/nextci/nextci/helm-chart-sources-helm-chart-test/values.yml'
+          value-files: '${{ github.workspace }}/charts/helm-chart-sources/helm-chart-test/values.yaml'
         env:
           KUBECONFIG_BASE64: '${{ secrets.KUBECONFIG }}'
