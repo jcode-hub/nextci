@@ -191,6 +191,6 @@ jobs:
           chart: 'mychart/helm-chart-test'
           token: '${{ github.token }}'
           # value-files: '${{ github.workspace }}/nextci/helm-chart-sources/helm-chart-test/values.yaml'
-          value-files: 'value.yml'
+          value-files: '/home/runner/work/nextci/nextci/helm-chart-sources-helm-chart-test/values.yml'
         env:
           KUBECONFIG_BASE64: '${{ secrets.KUBECONFIG }}'
