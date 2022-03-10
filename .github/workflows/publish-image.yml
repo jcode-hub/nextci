@@ -190,6 +190,6 @@ jobs:
           namespace: 'hello-world'
           chart: 'mychart/helm-chart-test'
           token: '${{ github.token }}'
-          value-files: '${{ github.workspace }}/helm-chart-sources/helm-chart-test/values.yaml'
+          value-files: '${{ github.workspace }}/nextci/helm-chart-sources/helm-chart-test/values.yaml'
         env:
           KUBECONFIG_BASE64: '${{ secrets.KUBECONFIG }}'
