@@ -169,12 +169,15 @@ jobs:
     container: alpine:latest
     # needs: [publish-docker-image]
     steps:
+      - name: Obtain Latest Git ONLY within container for checkout
+        run: apk add git --update-cache
       - uses: actions/checkout@v1
         with:
           repository: jcode-hub/helm-chart
           ref: main
           path: charts
           # submodules: true
+      - run: git log
       - run: pwd
       - run: ls -lah
       # - name: check folder
