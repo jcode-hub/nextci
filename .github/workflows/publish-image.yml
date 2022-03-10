@@ -166,6 +166,7 @@ jobs:
 
   deploy:
     runs-on: 'ubuntu-latest'
+    container: alpine:latest
     # needs: [publish-docker-image]
     steps:
       - uses: actions/checkout@v1
