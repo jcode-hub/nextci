@@ -190,10 +190,10 @@ jobs:
         with:
           release: helm-test
           helm: helm3
-          repository: 'https://jcode-hub.github.io/helm-chart'
-          # repository: '{{ secrets.HELM_REGISTRY }}'
+          # repository: 'https://jcode-hub.github.io/helm-chart'
+          repository: '${{ secrets.HELM_REGISTRY }}'
           repository-alias: 'mychart'
-          namespace: '{{ secrets.NAMESPACE }}'
+          namespace: '${{ secrets.NAMESPACE }}'
           chart: 'mychart/helm-chart-test'
           token: '${{ github.token }}'
           value-files: '${{ github.workspace }}/helm-chart-sources/helm-chart-test/values.yaml'
